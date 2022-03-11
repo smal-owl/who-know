@@ -1,0 +1,21 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>from flask import Flask, render_template\r\n\r\napp = Flask(__name__)\r\n\r\n\r\n@app.route('/')\r\ndef login():\r\n    return render_template('login.html')
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	
++++ b/main.py	
+@@ -5,4 +5,7 @@
+ 
+ @app.route('/')
+ def login():
+-    return render_template('login.html')
+\ No newline at end of file
++    return render_template('login.html')
++
++if __name__ == '__main__':
++    app.run(port=5050, host=)
+\ No newline at end of file

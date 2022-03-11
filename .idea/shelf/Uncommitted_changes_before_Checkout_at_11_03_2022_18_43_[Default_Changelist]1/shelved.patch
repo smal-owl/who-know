@@ -1,0 +1,11 @@
+Index: tamplates/index.html
+===================================================================
+diff --git a/tamplates/index.html b/tamplates/index.html
+--- a/tamplates/index.html	
++++ b/tamplates/index.html	
+@@ -1,0 +1,4 @@
++{% extends "base.html" %}
++
++{% block content %}
++{% endblock %}
+\ No newline at end of file
