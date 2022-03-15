@@ -4,6 +4,8 @@ from werkzeug.utils import redirect
 
 from flask_restful import reqparse, abort, Api, Resource
 
+import data.users_resource as us_re
+
 from data import db_session, news_resources
 from data.users import User
 from data.news import News
@@ -76,11 +78,13 @@ def load_user(user_id):
 
 
 if __name__ == '__main__':
-    # для списка объектов
     api.add_resource(news_resources.NewsListResource, '/api/v2/news')
 
-    # для одного объекта
     api.add_resource(news_resources.NewsResource, '/api/v2/news/<int:news_id>')
+
+    api.add_resource(us_re.UsersListResource, '/api/v2/users')
+
+    api.add_resource(us_re.UsersResource, '/api/v2/users/<int:user_id>')
 
     db_session.global_init("db/blogs.db")
     app.run(port=8080, host='127.0.0.1')
