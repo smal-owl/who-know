@@ -24,4 +24,4 @@ class News(SqlAlchemyBase):
                                 sqlalchemy.ForeignKey("users.id"))
     user = orm.relation('User')
 
-
+    is_published = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
