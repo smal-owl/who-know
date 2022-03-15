@@ -2,12 +2,15 @@ from flask import Flask, render_template
 from flask_login import LoginManager
 from werkzeug.utils import redirect
 
-from data import db_session
+from flask_restful import reqparse, abort, Api, Resource
+
+from data import db_session, news_resources
 from data.users import User
 from data.news import News
 from forms.user import RegisterForm
 
 app = Flask(__name__)
+api = Api(app)
 
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
 
@@ -73,5 +76,11 @@ def load_user(user_id):
 
 
 if __name__ == '__main__':
+    # для списка объектов
+    api.add_resource(news_resources.NewsListResource, '/api/v2/news')
+
+    # для одного объекта
+    api.add_resource(news_resources.NewsResource, '/api/v2/news/<int:news_id>')
+
     db_session.global_init("db/blogs.db")
     app.run(port=8080, host='127.0.0.1')
