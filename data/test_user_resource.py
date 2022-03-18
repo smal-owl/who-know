@@ -3,7 +3,6 @@ from requests import get, post, delete
 print(get("http://localhost:8080/api/v2/users").json())
 print(get("http://localhost:8080/api/v2/users/2").json())
 print(get("http://localhost:8080/api/v2/users/169").json())  # Нет такого
-print(get("http://localhost:8080/api/v2/users/Lox").json())  # Не тот формат
 
 print(post("http://localhost:8080/api/v2/users").json())  # Нет такого в словаре
 print(post("http://localhost:8080/api/v2/users", json={"name": "Миша"}).json())  # Не все поля

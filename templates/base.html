@@ -14,6 +14,9 @@
     <body>
 		<header>
 			<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+				{% if current_user.is_authenticated %}
+    				<a class="navbar-brand" href="/logout">{{ current_user.name }}</a>
+				{% else %}
 				<div class="container-fluid">
 					<a href="#" class="navbar-brad"><img src="/static/img/test-logo.jpg"></a>
 					<div class="collapse navbar-collapse" id="navbarResponsive">
@@ -27,14 +30,15 @@
 								</div>
 							</li>
 							<li class="nav-item">
-								<a href="/register" class="nav-link big-font-size">Зарегистрироваться</a>
+								<a href="/register" class="nav-link big-font-size btn btn-primary">Зарегистрироваться</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link big-font-size">Войти</a>
+								<a href="/login" class="nav-link big-font-size btn btn-success">Войти</a>
 							</li>
 						</ul>
 					</div>
-				</div>
+				{% endif %}
+                </div>
 			</nav>
 		</header>
 		<main>
