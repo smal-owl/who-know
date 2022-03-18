@@ -97,11 +97,6 @@ def logout():
 def load_user(user_id):
     db_sess = db_session.create_session()
     user = db_sess.query(User).all()
-    if user.is_authenticated:
-        news = db_sess.query(News).filter(
-            (News.user == user) | (News.is_private != True))
-    else:
-        news = db_sess.query(News).filter(News.is_private != True)
     return db_sess.query(User).get(user_id)
 
 

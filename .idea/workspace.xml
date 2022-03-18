@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил test_user_resource">
-      <change afterPath="$PROJECT_DIR$/forms/LoginForm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/blogs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/blogs.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-    </list>
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил возможность войти в свой аккаунт." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +50,7 @@
       <recent name="C:\Users\Egor\PycharmProjects\who-know\static" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.test_user_resource">
+  <component name="RunManager" selected="Python.main">
     <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="who-know" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -225,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647365318193</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавил возможность войти в свой аккаунт.">
+      <created>1647614762957</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1647614762957</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +265,7 @@
     <MESSAGE value="Начал делать миграцию." />
     <MESSAGE value="Добавил user_resource" />
     <MESSAGE value="Добавил test_user_resource" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил test_user_resource" />
+    <MESSAGE value="Добавил возможность войти в свой аккаунт." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил возможность войти в свой аккаунт." />
   </component>
 </project>
