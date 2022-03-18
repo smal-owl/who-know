@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил возможность войти в свой аккаунт." />
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил serve">
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -225,7 +227,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647614762957</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Добавил возможность войти в свой аккаунт. (Починил)">
+      <created>1647620880177</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1647620880177</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Добавил serve">
+      <created>1647621014270</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1647621014270</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +282,8 @@
     <MESSAGE value="Добавил user_resource" />
     <MESSAGE value="Добавил test_user_resource" />
     <MESSAGE value="Добавил возможность войти в свой аккаунт." />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил возможность войти в свой аккаунт." />
+    <MESSAGE value="Добавил возможность войти в свой аккаунт. (Починил)" />
+    <MESSAGE value="Добавил serve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил serve" />
   </component>
 </project>
