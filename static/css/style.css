@@ -103,7 +103,7 @@ input[name="r"] {
 	transform: translate(-100%, -40%);
 	background: #2f3640;
 	height: 50px;
-	width: 500px;
+	width: 300px;
 	border-radius: 40px;
 	padding: 10px;
 }
@@ -131,5 +131,5 @@ input[name="r"] {
 	font-size: 20px;
 	transition: 0.4s;
 	line-height: 40px;
-	width: 400px;
+	width: 220px;
 }
