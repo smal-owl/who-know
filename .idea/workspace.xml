@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил Домен tasks">
-      <change beforePath="$PROJECT_DIR$/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Исправил пару ошибок">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647869632790</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Исправил пару ошибок">
+      <created>1647869920035</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1647869920035</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -301,6 +308,7 @@
     <MESSAGE value="Добавил serve" />
     <MESSAGE value="Добавил Шаблон для записи новости." />
     <MESSAGE value="Добавил Домен tasks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил Домен tasks" />
+    <MESSAGE value="Исправил пару ошибок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил пару ошибок" />
   </component>
 </project>
