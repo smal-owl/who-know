@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Начал делать добавление новостей">
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Почти доделал добавление записей.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -281,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647955397643</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Почти доделал добавление записей.">
+      <created>1647963707039</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1647963707040</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -329,6 +335,7 @@
     <MESSAGE value="Исправил пару ошибок" />
     <MESSAGE value="Добавил авторизацию." />
     <MESSAGE value="Начал делать добавление новостей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Начал делать добавление новостей" />
+    <MESSAGE value="Почти доделал добавление записей." />
+    <option name="LAST_COMMIT_MESSAGE" value="Почти доделал добавление записей." />
   </component>
 </project>
