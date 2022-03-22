@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Почти доделал добавление записей.">
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавленно удаление и изменения новости.">
+      <change afterPath="$PROJECT_DIR$/db/blogs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/quest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -287,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647963707040</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Добавленно удаление и изменения новости.">
+      <created>1647965891651</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1647965891651</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,6 +346,7 @@
     <MESSAGE value="Добавил авторизацию." />
     <MESSAGE value="Начал делать добавление новостей" />
     <MESSAGE value="Почти доделал добавление записей." />
-    <option name="LAST_COMMIT_MESSAGE" value="Почти доделал добавление записей." />
+    <MESSAGE value="Добавленно удаление и изменения новости." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавленно удаление и изменения новости." />
   </component>
 </project>

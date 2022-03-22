@@ -35,7 +35,11 @@
 								</li>
 
 								<li class="nav-item">
-									<a class="navbar-brand nav-link big-font-size" href="">{{ current_user.name }}</a>
+									{% if current_user.name[-4:] == "3.14"%}
+										<a class="navbar-brand nav-link big-font-size" href="">{{ current_user.name[:-4]}}</a>
+									{% else %}
+									    <a class="navbar-brand nav-link big-font-size" href="">{{ current_user.name}}</a>
+									{% endif %}
 								</li>
 								<li class="nav-item">
 									<a class="navbar-brand nav-link big-font-size" href="/logout">Выход</a>

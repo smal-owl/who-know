@@ -156,6 +156,33 @@ def news_delete(id):
     return redirect('/tasks')
 
 
+@app.route('/quest/<int:id>', methods=['GET', 'POST'])
+@login_required
+def quest(id):
+    '''db_sess = db_session.create_session()
+    news = db_sess.query(News).filter(News.id == id,
+                                      News.user == current_user
+                                      ).first()
+    if news:
+        db_sess.delete(news)
+        db_sess.commit()
+    else:
+        abort(404)
+    return redirect('/tasks')'''
+    form = NewsForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        news = News()
+        news.title = form.title.data
+        news.content = form.content.data
+        news.is_private = form.is_private.data
+        current_user.news.append(news)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('quest.html')
+
+
 @app.route('/logout')
 @login_required
 def logout():
