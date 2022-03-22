@@ -1,31 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container">
-    <section class="mt-4">
-        <div class="row">
-            <div class="col-md-8 mb-4">
-                <div class="card mb-4 wow fadeIn">
-                    <div class="card-body">
-                        <p class="h5 my-4">Ку-ку</p>
-
-                        <blockquote class="blockquote">
-                            <p class="mb-0 ">
-                                Ку-ку 2
-                            </p>
-                            <footer class="blockquote-footer">
-                                <cite title="Hello">
-                                    Hello
-                                </cite>
-                            </footer>
-                        </blockquote>
-
-                        <p class="h5 my-4">Ку-ку</p>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<h1>Записи в блоге</h1>
+{% for item in newss%}
+<div class="col-md6 border rounded">
+    <h2>{{item.title}}</h2>
+    <div>
+        {{item.content}}
+    </div>
+    <div>
+        Автор - {{item.user.name}}, Дата написания - {{item.created_date}}
+    </div>
 </div>
+{% endfor %}
 {% endblock %}
