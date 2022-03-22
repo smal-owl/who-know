@@ -6,12 +6,14 @@ from flask_restful import reqparse, abort, Api, Resource
 
 import data.users_resource as us_re
 
-from data import db_session, news_resources
+from data import db_session, news_resources, quests_resource
 from data.users import User
 from data.news import News
+from data.quests import Quest
 from forms.user import RegisterForm
 from forms.LoginForm import LoginForm
 from forms.news import NewsForm
+from forms.questsForm import QuestsForm
 
 app = Flask(__name__)
 api = Api(app)
@@ -39,6 +41,14 @@ def add_news():
     news.is_private = False
     db_sess = db_session.create_session()
     db_sess.add(news)
+    db_sess.commit()
+
+
+def add_quest():
+    quest = Quest()
+    quest.content = "биография пользователя 1"
+    db_sess = db_session.create_session()
+    db_sess.add(quest)
     db_sess.commit()
 
 
@@ -102,7 +112,7 @@ def add_news():
         current_user.news.append(news)
         db_sess.merge(current_user)
         db_sess.commit()
-        return redirect('/')
+        return redirect('/tasks')
     return render_template('news.html', title='Добавление новости',
                            form=form)
 
@@ -113,8 +123,7 @@ def edit_news(id):
     form = NewsForm()
     if request.method == "GET":
         db_sess = db_session.create_session()
-        news = db_sess.query(News).filter(News.id == id,
-                                          News.user == current_user
+        news = db_sess.query(News).filter(News.id == id
                                           ).first()
         if news:
             form.title.data = news.title
@@ -124,8 +133,7 @@ def edit_news(id):
             abort(404)
     if form.validate_on_submit():
         db_sess = db_session.create_session()
-        news = db_sess.query(News).filter(News.id == id,
-                                          News.user == current_user
+        news = db_sess.query(News).filter(News.id == id
                                           ).first()
         if news:
             news.title = form.title.data
@@ -158,17 +166,46 @@ def news_delete(id):
 @app.route('/quest/<int:id>', methods=['GET', 'POST'])
 @login_required
 def quest(id):
-    '''db_sess = db_session.create_session()
-    news = db_sess.query(News).filter(News.id == id,
-                                      News.user == current_user
-                                      ).first()
-    if news:
-        db_sess.delete(news)
+    form = QuestsForm()
+    if request.method == "GET":
+        db_sess = db_session.create_session()
+        quest = db_sess.query(Quest).filter(Quest.news_id == id
+                                            ).first()
+        if quest:
+            form.content.data = quest.content
+        else:
+            abort(404)
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        quest = db_sess.query(Quest).filter(Quest.news_id == id
+                                            ).first()
+        if quest:
+            quest.content = form.content.data
+            db_sess.commit()
+            return redirect('/tasks')
+        else:
+            abort(404)
+    return render_template('quest.html',
+                           title='Отправить ответ',
+                           form=form
+                           )
+
+
+@app.route('/quests', methods=['GET', 'POST'])
+@login_required
+def add_quest():
+    form = QuestsForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        quest = Quest()
+        quest.content = form.content.data
+        quest.news_id = form.news_id.data
+        current_user.quest.append(quest)
+        db_sess.merge(current_user)
         db_sess.commit()
-    else:
-        abort(404)
-    return redirect('/tasks')'''
-    return render_template('quest.html')
+        return redirect('/tasks')
+    return render_template('quest.html', title='Добавление Комментария',
+                           form=form)
 
 
 @app.route('/logout')
@@ -196,6 +233,10 @@ if __name__ == '__main__':
     api.add_resource(news_resources.NewsListResource, '/api/v2/news')
 
     api.add_resource(news_resources.NewsResource, '/api/v2/news/<int:news_id>')
+
+    api.add_resource(quests_resource.QuestListResource, '/api/v2/quest')
+
+    api.add_resource(quests_resource.QuestResource, '/api/v2/quest/<int:news_id>')
 
     api.add_resource(us_re.UsersListResource, '/api/v2/users')
 
