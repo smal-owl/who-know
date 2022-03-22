@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Исправил пару ошибок (есть ошибка в quest)">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Исправил пару ошибок" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -299,7 +297,21 @@
       <option name="project" value="LOCAL" />
       <updated>1647967546696</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Исправил пару ошибок">
+      <created>1647967643802</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1647967643802</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Исправил пару ошибок">
+      <created>1647967731900</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1647967731900</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,12 +356,12 @@
     <MESSAGE value="Добавил serve" />
     <MESSAGE value="Добавил Шаблон для записи новости." />
     <MESSAGE value="Добавил Домен tasks" />
-    <MESSAGE value="Исправил пару ошибок" />
     <MESSAGE value="Добавил авторизацию." />
     <MESSAGE value="Начал делать добавление новостей" />
     <MESSAGE value="Почти доделал добавление записей." />
     <MESSAGE value="Добавленно удаление и изменения новости." />
     <MESSAGE value="Исправил пару ошибок (есть ошибка в quest)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил пару ошибок (есть ошибка в quest)" />
+    <MESSAGE value="Исправил пару ошибок" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправил пару ошибок" />
   </component>
 </project>

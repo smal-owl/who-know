@@ -145,8 +145,7 @@ def edit_news(id):
 @login_required
 def news_delete(id):
     db_sess = db_session.create_session()
-    news = db_sess.query(News).filter(News.id == id,
-                                      News.user == current_user
+    news = db_sess.query(News).filter(News.id == id
                                       ).first()
     if news:
         db_sess.delete(news)
