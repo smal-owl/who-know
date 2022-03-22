@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="блф блф бф">
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Добавил авторизацию.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/__all_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/__all_models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/news.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/blogs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/blogs.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/blogs.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -269,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647869920035</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Добавил авторизацию.">
+      <created>1647952359854</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1647952359854</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -315,6 +323,7 @@
     <MESSAGE value="Добавил Шаблон для записи новости." />
     <MESSAGE value="Добавил Домен tasks" />
     <MESSAGE value="Исправил пару ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправил пару ошибок" />
+    <MESSAGE value="Добавил авторизацию." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил авторизацию." />
   </component>
 </project>

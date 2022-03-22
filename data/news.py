@@ -5,7 +5,7 @@ from sqlalchemy import orm
 from .db_session import SqlAlchemyBase
 
 
-class News(SqlAlchemyBase, ):
+class News(SqlAlchemyBase):
     __tablename__ = 'news'
 
     id = sqlalchemy.Column(sqlalchemy.Integer,
@@ -22,6 +22,5 @@ class News(SqlAlchemyBase, ):
 
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
-    user = orm.relation('User')
 
-    is_published = sqlalchemy.Column(sqlalchemy.Boolean, default=True)
+    user = orm.relation('User')

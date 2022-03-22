@@ -11,6 +11,7 @@ from data.users import User
 from data.news import News
 from forms.user import RegisterForm
 from forms.LoginForm import LoginForm
+from  forms.news import NewsForm
 
 app = Flask(__name__)
 api = Api(app)
@@ -88,6 +89,24 @@ def login():
     return render_template('login.html', title='Авторизация', form=form)
 
 
+@app.route('/news', methods=['GET', 'POST'])
+@login_required
+def add_news():
+    form = NewsForm()
+    if form.validate_on_submit():
+        db_sess = db_session.create_session()
+        news = News()
+        news.title = form.title.data
+        news.content = form.content.data
+        news.is_private = form.is_private.data
+        current_user.news.append(news)
+        db_sess.merge(current_user)
+        db_sess.commit()
+        return redirect('/')
+    return render_template('news.html', title='Добавление новости',
+                           form=form)
+
+
 @app.route('/logout')
 @login_required
 def logout():
@@ -95,17 +114,11 @@ def logout():
     return redirect("/")
 
 
-'''@app.route('/tasks')
-def tasks():
-    logout_user()
-    return render_template('tasks.html')'''
-
-
 @app.route("/tasks")
 def index():
     db_sess = db_session.create_session()
     news = db_sess.query(News).filter(News.is_private != True)
-    return render_template("tasks.html", newss=news)
+    return render_template("tasks.html", news=news)
 
 
 @login_manager.user_loader
