@@ -133,6 +133,7 @@ def edit_news(id):
         else:
             abort(404)
     if form.validate_on_submit():
+        print('Зашёл в валидатор у News')
         db_sess = db_session.create_session()
         news = db_sess.query(News).filter(News.id == id
                                           ).first()
@@ -169,20 +170,30 @@ def news_delete(id):
 def quest(id):
     form = QuestsForm()
     if request.method == "GET":
+        print('Зашёл в метод GET')
         db_sess = db_session.create_session()
-        quest = db_sess.query(Quest).filter(Quest.news_id == id
+        quest = db_sess.query(Quest).filter(Quest.id == id
                                             ).first()
         if quest:
+            print('Зашёл в проверку if quest внутри GET')
             form.content.data = quest.content
+            form.user_id.data = quest.user_id
         else:
+            print('Зашёл в проверку else внутри GET')
             abort(404)
 
+    print('Вышел из GET')
+
+    print(form.validate_on_submit())
+
     if form.validate_on_submit():
+        print('Зашёл в валидатор')
         db_sess = db_session.create_session()
-        quest = db_sess.query(Quest).filter(Quest.news_id == id
+        quest = db_sess.query(Quest).filter(Quest.id == id
                                             ).first()
         if quest:
             quest.content = form.content.data
+            quest.user_id = form.user_id.data
             db_sess.commit()
             return redirect('/tasks')
         else:
@@ -224,6 +235,13 @@ def index():
     return render_template("tasks.html", news=news)
 
 
+@app.route('/comment/<int:id>', methods=['GET', 'POST'])
+def comment(id):
+    db_sess = db_session.create_session()
+    quest = db_sess.query(Quest).filter(Quest.news_id == id)
+    return render_template("comment.html", news=quest)
+
+
 @login_manager.user_loader
 def load_user(user_id):
     db_sess = db_session.create_session()
@@ -245,5 +263,5 @@ if __name__ == '__main__':
     api.add_resource(us_re.UsersResource, '/api/v2/users/<int:user_id>')
 
     db_session.global_init("db/blogs.db")
-    '''app.run(port=8080, host='127.0.0.1')'''
-    serve(app, host='0.0.0.0', port=5000)
+    app.run(port=8080, host='127.0.0.1')
+"""    serve(app, host='0.0.0.0', port=5000)"""

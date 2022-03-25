@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container">
+    <section class="mt-4">
+        <div class="row">
+            <h1>Записи в блоге</h1>
+        </div>
+        {% if current_user.is_authenticated %}
+        <a href="news" class="btn btn-secondary">Добавить Задачу</a>
+        {% endif %}
+    </section>
+</div>
+
+
+{% for item in news[::-1]%}
+<div class="container">
+    <section class="mt-4">
+        <div class="row">
+            <div class="col-md-8 mb-4">
+                <div class="card mb-4 wow fadeIn">
+                    <div class="col-md6 border rounded card-body">
+
+
+                        <blockquote class="blockquote">
+
+                            <p class="mb-0 ">
+                                {{item.content}}
+                            </p>
+
+
+                        </blockquote>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endfor %}
+{% endblock %}
