@@ -24,6 +24,12 @@
                     </p>
                 {% endfor %}
             </p>
+
+            <div class="form-group">
+                <label for="photo">Выберите файл</label>
+                <input type="file" class="form-control-file" id="photo" name="file">
+            </div>
+
             <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
             {{message}}
         </form>
