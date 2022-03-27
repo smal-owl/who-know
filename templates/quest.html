@@ -15,15 +15,6 @@
                     </p>
                 {% endfor %}
             </p>
-            <p>
-                {{ form.user_id.label }}<br>
-                {{ form.user_id(class="form-control") }}<br>
-                {% for error in form.user_id.errors %}
-                    <p class="alert alert-danger" role="alert">
-                        {{ error }}
-                    </p>
-                {% endfor %}
-            </p>
             <div class="form-group">
                 <label for="photo">Выберите файл</label>
                 <input type="file" class="form-control-file" id="photo" name="file">
