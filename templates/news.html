@@ -4,7 +4,7 @@
 <div>
     <form class="login_form" method="post">
         <h1>Добавление новости</h1>
-        <form action="" method="post">
+        <form action="" method="post" enctype="multipart/form-data">
             {{ form.hidden_tag() }}
             <p>
                 {{ form.title.label }}<br>
@@ -25,7 +25,7 @@
                 {% endfor %}
             </p>
 
-            <div class="form-group">
+            <div class="form-group" >
                 <label for="photo">Выберите файл</label>
                 <input type="file" class="form-control-file" id="photo" name="file">
             </div>

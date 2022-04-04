@@ -22,4 +22,4 @@ class Quest(SqlAlchemyBase):
     news_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("news.id"))
 
-    user = orm.relation('News')
+    user = orm.relation('User')

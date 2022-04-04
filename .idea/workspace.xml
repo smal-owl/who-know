@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Пара ошибок">
-      <change afterPath="$PROJECT_DIR$/templates/comment.html" afterDir="false" />
+    <list default="true" id="7a8e5b04-adb6-44e8-8d16-0587500e1038" name="Changes" comment="Реализовал добавление коментариев в базу данных">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/news.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/news.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/quests.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/quests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/users.py" beforeDir="false" afterPath="$PROJECT_DIR$/data/users.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db/blogs.db" beforeDir="false" afterPath="$PROJECT_DIR$/db/blogs.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/forms/questsForm.py" beforeDir="false" afterPath="$PROJECT_DIR$/forms/questsForm.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/quest.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/quest.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/tasks.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +104,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="search" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="who-know" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/AppData/Local/Temp/Rar$DIa22816.2729" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/AppData/Local/Temp/Rar$DIa22816.2729/search.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_user_resource" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="who-know" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,10 +150,12 @@
       <item itemvalue="Python.Unnamed" />
       <item itemvalue="Python.test_user_resource" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.search" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.main" />
+        <item itemvalue="Python.search" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.main" />
       </list>
@@ -360,7 +387,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648218680840</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Реализовал добавление коментариев в базу данных">
+      <created>1648226620110</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1648226620110</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -388,7 +422,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Дал главному окну немного красоты" />
     <MESSAGE value="Добавил папку для базы данных" />
     <MESSAGE value="Добавил папку data" />
     <MESSAGE value="Добавил классы User и News для дальнейшей регистрации пользоватея." />
@@ -413,6 +446,7 @@
     <MESSAGE value="Сделал форму Входа в аккаунт красивой." />
     <MESSAGE value="Сделал форму ответов красивой." />
     <MESSAGE value="Пара ошибок" />
-    <option name="LAST_COMMIT_MESSAGE" value="Пара ошибок" />
+    <MESSAGE value="Реализовал добавление коментариев в базу данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Реализовал добавление коментариев в базу данных" />
   </component>
 </project>

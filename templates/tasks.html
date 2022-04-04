@@ -45,10 +45,14 @@
 									{% endif %}
 
                                 </cite>
+
+
+
                             </footer>
+
                         </blockquote>
                         <div>
-                            <a href="/quest/{{ item.id }}" class="btn btn-warning">
+                            <a href="/quests/{{ item.id }}" class="btn btn-warning">
                                 Добавить ответ
                             </a>
 
@@ -62,6 +66,50 @@
                             </a>
                         </div>
                         {% endif %}
+                        <div>
+                            {% for q in quest[::-1]%}
+                                {% if item.id == q.news_id %}
+                                <div class="container">
+                                    <section class="mt-4">
+                                        <div class="row">
+                                            <div class="col-md-8 mb-4">
+                                                <div class="card mb-4 wow fadeIn">
+                                                    <div class="col-md6 border rounded card-body">
+
+
+                                                        <blockquote class="blockquote">
+
+                                                            <p class="mb-0 ">
+
+                                                                {{q.content}}
+
+
+                                                            </p>
+
+
+                                                        </blockquote>
+                                                        <p>
+                                                            {% if item.user.name[-4:] == "3.14"%}
+                                                                <div>
+									                	            Автор - {{q.user.name[:-4]}}, Дата написания - {{q.created_date}}
+                                                                </div>
+                                                            {% else %}
+									                            <div>
+									                	            Автор - {{q.user.name}}, Дата написания - {{q.created_date}}
+                                                                </div>
+									                        {% endif %}
+                                                        </p>
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                                {% endif %}
+                                {% endfor %}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -15,6 +15,7 @@ from forms.user import RegisterForm
 from forms.LoginForm import LoginForm
 from forms.news import NewsForm
 from forms.questsForm import QuestsForm
+import datetime
 
 app = Flask(__name__)
 api = Api(app)
@@ -102,6 +103,7 @@ def login():
 
 @app.route('/news', methods=['GET', 'POST'])
 @login_required
+
 def add_news():
     form = NewsForm()
     if form.validate_on_submit():
@@ -117,37 +119,68 @@ def add_news():
     return render_template('news.html', title='Добавление новости',
                            form=form)
 
+'''def add_news():
+    form = NewsForm()
+    if request.method == 'GET':
+        if form.validate_on_submit():
+            db_sess = db_session.create_session()
+            news = News()
+            news.title = form.title.data
+            news.content = form.content.data
+            news.is_private = form.is_private.data
+            current_user.news.append(news)
+            db_sess.merge(current_user)
+            db_sess.commit()
+            return redirect('/tasks')
+    elif request.method == 'POST':
+        f = request.files['file']
+        print(f.filename)
+        with open(f'static/img/{f.filename}', 'wb') as file:
+            print(f.filename)
+            file.write(f.read())
+    return render_template('news.html', title='Добавление новости',
+                       form=form)
+'''
 
 @app.route('/news/<int:id>', methods=['GET', 'POST'])
 @login_required
 def edit_news(id):
-    form = NewsForm()
+    form_news = NewsForm()
+    form_quest = QuestsForm()
     if request.method == "GET":
         db_sess = db_session.create_session()
         news = db_sess.query(News).filter(News.id == id
                                           ).first()
+
+        quest = db_sess.query(Quest).filter(Quest.news_id == id)
+
         if news:
-            form.title.data = news.title
-            form.content.data = news.content
-            form.is_private.data = news.is_private
+            form_news.title.data = news.title
+            form_news.content.data = news.content
+            form_news.is_private.data = news.is_private
+
         else:
             abort(404)
-    if form.validate_on_submit():
+
+        #  if quest:
+        #      form_quest.content.data = quest.content
+
+    if form_news.validate_on_submit():
         print('Зашёл в валидатор у News')
         db_sess = db_session.create_session()
         news = db_sess.query(News).filter(News.id == id
                                           ).first()
         if news:
-            news.title = form.title.data
-            news.content = form.content.data
-            news.is_private = form.is_private.data
+            news.title = form_news.title.data
+            news.content = form_news.content.data
+            news.is_private = form_news.is_private.data
             db_sess.commit()
             return redirect('/tasks')
         else:
             abort(404)
     return render_template('news.html',
                            title='Редактирование новости',
-                           form=form
+                           form=form_news
                            )
 
 
@@ -204,15 +237,16 @@ def quest(id):
                            )
 
 
-@app.route('/quests', methods=['GET', 'POST'])
+@app.route('/quests/<int:id>', methods=['GET', 'POST'])
 @login_required
-def add_quest():
+def add_quest(id):
     form = QuestsForm()
     if form.validate_on_submit():
         db_sess = db_session.create_session()
         quest = Quest()
         quest.content = form.content.data
-        quest.news_id = form.news_id.data
+        quest.news_id = id
+        print(quest.content, id, sep='\n')
         current_user.quest.append(quest)
         db_sess.merge(current_user)
         db_sess.commit()
@@ -232,7 +266,8 @@ def logout():
 def index():
     db_sess = db_session.create_session()
     news = db_sess.query(News).filter(News.is_private != True)
-    return render_template("tasks.html", news=news)
+    quest = db_sess.query(Quest)
+    return render_template("tasks.html", news=news, quest=quest)
 
 
 @app.route('/comment/<int:id>', methods=['GET', 'POST'])

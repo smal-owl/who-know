@@ -23,6 +23,8 @@ class User(SqlAlchemyBase, UserMixin):
 
     news = orm.relation("News", back_populates='user')
 
+    quest = orm.relation("Quest", back_populates='user')
+
     def set_password(self, password):
         self.hashed_password = generate_password_hash(password)
 
