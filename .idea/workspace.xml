@@ -124,8 +124,8 @@
     </configuration>
     <list>
       <item itemvalue="Python.Unnamed" />
-      <item itemvalue="Python.test_user_resource" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.test_user_resource" />
     </list>
     <recent_temporary>
       <list>
