@@ -205,7 +205,7 @@ def quest(id):
     if request.method == "GET":
         print('Зашёл в метод GET')
         db_sess = db_session.create_session()
-        quest = db_sess.query(Quest).filter(Quest.id == id
+        quest = db_sess.query(Quest).filter(News.id == id
                                             ).first()
         if quest:
             print('Зашёл в проверку if quest внутри GET')
